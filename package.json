@@ -6,5 +6,8 @@
   "repository": "https://github.com/mastersanto/ws-graphql",
   "author": "Jorge Sandoval<jorgeivansandoval@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "graphql": "^14.1.1"
+  }
 }
