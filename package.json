@@ -1,0 +1,10 @@
+{
+  "name": "ws-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL Workshop",
+  "main": "index.js",
+  "repository": "https://github.com/mastersanto/ws-graphql",
+  "author": "Jorge Sandoval<jorgeivansandoval@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
