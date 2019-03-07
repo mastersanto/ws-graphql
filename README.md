@@ -9,6 +9,10 @@ npm install graphql
 
 node hello.js
 ```
+* Without Express
+
+https://www.apollographql.com/docs/apollo-server/features/mocking.html
+
 
 * GraphQL Server
     * express
@@ -29,6 +33,36 @@ query {
   hello
 }
 
+```
+
+* Apollo Server
+```
+# Write your query or mutation here
+query Posts {
+  posts {
+    id
+    title
+    imageUrl
+    votes {
+      likes
+      dislikes
+    }
+  }
+}
+
+mutation LikePost($id: Int!) {
+  likePost(id: $id) {
+    votes {
+      likes
+      dislikes
+    }
+  }
+}
+
+// VARIABLES
+{
+  "id": 1
+}
 ```
 * Next
     * [Mocking](https://www.apollographql.com/docs/apollo-server/features/mocking.html)

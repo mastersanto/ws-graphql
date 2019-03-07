@@ -1,4 +1,4 @@
-var { graphql, buildSchema } = require('graphql');
+const { graphql, buildSchema } = require('graphql');
 
 var schema = buildSchema(`
   type Query {
@@ -6,8 +6,8 @@ var schema = buildSchema(`
   }
 `);
 
-var root = { hello: () => 'Hello world!' };
+const root = {hello: () => 'Hello world!'};
 
 graphql(schema, '{ hello }', root).then((response) => {
-    console.log(response);
+  console.log(response);
 });
