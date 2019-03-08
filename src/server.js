@@ -1,16 +1,11 @@
-// const url = require('url');
 const Express = require('express');
-// import Express from 'express';
 const { createServer } = require('http');
 const { ApolloServer } = require('apollo-server-express');
 
 const PORT = 4000;
 
-// const config = require('./config');
 const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers');
-// import staticFiles from './middlewares/static';
-// import view from './middlewares/view';
 
 class Server {
   start() {

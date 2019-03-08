@@ -30,7 +30,15 @@ const resolvers = {
       post.votes.likes += 1;
       pubsub.publish(ON_POST_LIKE, { onPostLike: post });
       return post;
-
+    },
+    async dislikePost(_, { id }) {
+      const post = find(posts, { id });
+      if (!post) {
+        throw new Error(`Couldn't find post with id ${id}`);
+      }
+      post.votes.dislikes += 1;
+      pubsub.publish(ON_POST_DISLIKE, { onPostDislike: post });
+      return post;
     },
   },
   Subscription: {

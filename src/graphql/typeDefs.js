@@ -30,6 +30,9 @@ const typeDefs = gql`
     likePost (
       id: Int!
     ): Post
+    dislikePost (
+      id: Int!
+    ): Post
   }
 
   type Subscription {
